@@ -93,10 +93,11 @@
 <body class="bg-white text-center container">
     <div class="header flex justify-between items-center p-2 md:p-4 bg-white relative">
         <div class="logo">
-            <video class="logo" loop autoplay muted>
+            <video class="logo" loop autoplay muted playsinline preload="auto">
                 <source src="M TECH.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+            
         </div>
         <div class="menu-icon text-2xl cursor-pointer md:hidden" onclick="toggleMenu()">
             <div class="nav-menu" id="navMenu">
@@ -151,5 +152,18 @@
             }
         }
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const video = document.querySelector("video");
+            // Attempt to autoplay the video on load
+            video.play().catch(() => {
+                // Fallback: play the video when the user interacts with the page
+                document.addEventListener("click", () => {
+                    video.play();
+                }, { once: true }); // Trigger only once
+            });
+        });
+    </script>
+    
 </body>
 </html>
