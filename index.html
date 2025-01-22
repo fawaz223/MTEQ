@@ -214,7 +214,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <video class="logo" loop autoplay muted playsinline>
+            <video class="logo" loop autoplay muted playsinline  preload="auto" >
                 <source src="M TECH.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -229,7 +229,7 @@
             </div>
         </div>
         <div class="banner">
-            <video class="logo" loop autoplay muted>
+            <video class="logo" loop autoplay muted playsinline  preload="auto">
                 <source src="2025_01_21_00_30_IMG_2785.MOV" type="video/mp4">
             </video>
             <div class="banner-text">
@@ -291,5 +291,18 @@
             }
         }
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const video = document.querySelector("video");
+            // Attempt to autoplay the video on load
+            video.play().catch(() => {
+                // Fallback: play the video when the user interacts with the page
+                document.addEventListener("click", () => {
+                    video.play();
+                }, { once: true }); // Trigger only once
+            });
+        });
+    </script>
+    
 </body>
 </html>
