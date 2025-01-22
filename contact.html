@@ -1,83 +1,28 @@
+<!DOCTYPE html>
 <html>
- <head>
-  <title>
-   Contact Us
-  </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-   body {
-            font-family: 'Courier New', Courier, monospace;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #ffffff;
+<head>
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .title, .description {
+            font-family: 'Orbitron', sans-serif;
         }
         .logo {
-            width: 150px;
+            width: 80px;
             height: 80px;
-        }
-        
-        .container {
-            text-align: center;
-        }
-        .contact-form {
-            background-color: #eee6e6;
-            padding: 20px;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 400px;
-            margin: 20px 0;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 10px;
-            border: none;
-            font-size: 16px;
-        }
-        .contact-form button {
-            background-color: #000000;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: #333333;
-        }
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        .social-icons a {
-            background-color: #8c8c8c;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 10px;
-        }
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
         }
         footer {
             background-color: #000000;
             color: white;
             text-align: center;
-            padding: 20px 0;
-            margin-top: 10px;
+            padding: 10px 0;
+            margin-top: 30px;
         }
         footer a {
             color: #00bcd4;
@@ -86,158 +31,125 @@
         footer a:hover {
             text-decoration: underline;
         }
-        .menu-icon {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 24px;
-        }
-        .menu-icon div {
-            width: 30px;
-            height: 3px;
-            background-color: #000000;
-        }
-        .navbar {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 60px;
-            right: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .navbar a {
-            text-decoration: none;
-            color: #000000;
-            padding: 10px 20px;
-            font-size: 18px;
-            display: block;
-        }
-        .navbar a:hover {
-            background-color: #f0f0f0;
-        }
-        @media (max-width: 768px) {
-            .menu-icon {
-                display: flex;
-            }
-            .navbar {
-                display: flex;
-            }
-        }
-        .desktop-menu {
-            display: flex;
-            justify-content: flex-end;
-            margin-top: 20px;
-            font-size: 18px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        .contact-form input, .contact-form textarea {
+            width: 100%;
             padding: 10px;
-            background-color: white;
+            margin: 10px 0;
+            border: 1px solid #ccc;
             border-radius: 5px;
         }
-        .desktop-menu a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: black;
+        .contact-form button {
+            background-color: #0284c7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        .desktop-menu a:hover {
-            text-decoration: underline;
+        .contact-form button:hover {
+            background-color: #0369a1;
         }
-  </style>
- </head>
- <body>
-    <div class="header">
-        <video class="logo" loop autoplay muted>
-            <source src="M TECH.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-  <div class="menu-icon" onclick="toggleMenu()">
-   <div>
-   </div>
-   <div>
-   </div>
-   <div>
-   </div>
-  </div>
-  <div class="navbar" id="navbar">
-  <a href="index.html">
-     Home
-    </a>
-    <a href="about.html">
-     About
-    </a>
-    <a href="services.html">
-     Services
-    </a>
-    <a href="contact.html">
-     Contact
-    </a>
-  </div>
-  <div class="desktop-menu">
-    <a href="index.html">
-     Home
-    </a>
-    <a href="about.html">
-     About
-    </a>
-    <a href="services.html">
-     Services
-    </a>
-    <a href="contact.html">
-     Contact
-    </a>
-   </div>
-  <div class="container">
-   <h1>
-    CONTACT US
-   </h1>
-   <div class="contact-form">
-    <label for="name">
-     NAME:
-    </label>
-    <input id="name" name="name" type="text"/>
-    <label for="email">
-     EMAIL:
-    </label>
-    <input id="email" name="email" type="email"/>
-    <label for="message">
-     MESSAGE:
-    </label>
-    <textarea id="message" name="message" rows="4"></textarea>
-    <button type="submit">
-     SEND
-    </button>
-   </div>
-   <div class="social-icons">
-    <a href="#">
-     <img alt="Instagram icon" height="50" src="https://storage.googleapis.com/a1aa/image/vfQaqLbKwxWkUqATbkbOeHIeEIAs0V2Lc4Q14eC9C8uVU4dQB.jpg" width="50"/>
-    </a>
-    <a href="#">
-     <img alt="Facebook icon" height="50" src="https://storage.googleapis.com/a1aa/image/Yysq9hYo02bPHZ7txHdpeIXaArBocff0xTYaRjxEllUNK8OoA.jpg" width="50"/>
-    </a>
-    <a href="#">
-     <img alt="WhatsApp icon" height="50" src="https://storage.googleapis.com/a1aa/image/iO82AellPSxVIiOeobew7hyulE8TNrYm9JrrC54knAEPK8OoA.jpg" width="50"/>
-    </a>
-   </div>
-   <footer>
-    <p>&copy; 2025 MTECH Phone Repairs.All Rights Reserved
-         <h6> <a href="#">Privacy Policy</a> /<a href="#">Terms of Service</a></h6></p>
-</footer>
-  </div>
-  <script>
-   function toggleMenu() {
-            var navbar = document.getElementById('navbar');
-            if (navbar.style.display === 'flex') {
-                navbar.style.display = 'none';
-            } else {
-                navbar.style.display = 'flex';
+
+        @media (max-width: 640px) {
+            .contact-form {
+                padding: 10px;
+            }
+            .contact-form input, .contact-form textarea {
+                padding: 8px;
+            }
+            .contact-form button {
+                padding: 8px 16px;
+                font-size: 14px;
             }
         }
-  </script>
- </body>
+
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .contact-form {
+                padding: 15px;
+            }
+            .contact-form input, .contact-form textarea {
+                padding: 10px;
+            }
+            .contact-form button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .contact-form {
+                padding: 20px;
+            }
+            .contact-form input, .contact-form textarea {
+                padding: 12px;
+            }
+            .contact-form button {
+                padding: 12px 24px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-center container">
+    <div class="header flex justify-between items-center p-2 md:p-4 bg-white relative">
+        <div class="logo">
+            <video class="logo" loop autoplay muted>
+                <source src="M TECH.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="menu-icon text-2xl cursor-pointer md:hidden" onclick="toggleMenu()">
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="menu md:flex hidden" id="menu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="title text-2xl my-5">CONTACT US</div>
+    <div class="description text-lg my-2">We'd love to hear from you! Please fill out the form below:</div>
+
+    <div class="contact-form max-w-md mx-auto bg-gray-100 p-5 rounded-lg shadow-md">
+        <form action="#" method="post">
+            <label for="name" class="block text-left">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email" class="block text-left">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="subject" class="block text-left">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+
+            <label for="message" class="block text-left">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 MTECH Phone Repairs. All Rights Reserved
+            <h6><a href="#">Privacy Policy</a> / <a href="#">Terms of Service</a></h6>
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+</body>
 </html>
