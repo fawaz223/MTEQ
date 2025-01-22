@@ -1,0 +1,294 @@
+<html>
+<head>
+    <title>MTECH Phone Repairs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            
+        }
+          .container {
+            max-width: 200px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('WALL.JPG');
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px); 
+            z-index: -1; 
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #ffffff;
+            position: relative;
+        }
+        footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        .team-member img {
+           width: 20%;
+           height: 100px;
+           object-fit: cover;
+           border-radius: 50%;
+}
+
+.team-member h2 {
+  color: #333;
+}
+
+.team-member p {
+  color: #666;
+}
+
+        footer a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .logo {
+            width: 150px;
+            height: 80px;
+        }
+        .menu-icon {
+            margin-left: auto;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            background-color: rgba(3, 18, 40, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            z-index: 1000;
+        }
+        .nav-menu a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #f9f1f1;
+            font-size: 14px;
+        }
+        .nav-menu a:hover {
+            background-color: #717a80;
+        }
+        .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .banner video {
+            width: 100%;
+            height: auto;
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content img {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .content p {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #333;
+        }
+        .left-align {
+            text-align: left;
+        }
+        .right-align {
+            text-align: right;
+        }
+        .move-right {
+            text-align: right;
+        }
+        @media (max-width: 600px) {
+            .container {
+                max-width: 100%;
+                padding: 10px;
+            }
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+            .menu-icon {
+                font-size: 20px;
+            }
+            .content img {
+                width: 80px;
+                height: 80px;
+            }
+            .content p {
+                font-size: 12px;
+            }
+            .banner-text {
+                font-size: 20px;
+            }
+        }
+
+        /* Medium screens (601px to 1024px) */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .container {
+                max-width: 90%;
+                padding: 20px;
+            }
+            .logo {
+                width: 70px;
+                height: 70px;
+            }
+            .menu-icon {
+                font-size: 22px;
+            }
+            .content img {
+                width: 90px;
+                height: 90px;
+            }
+            .content p {
+                font-size: 13px;
+            }
+            .banner-text {
+                font-size: 22px;
+            }
+        }
+
+        /* Large screens (min-width: 1025px) */
+        @media (min-width: 1025px) {
+            .container {
+                max-width: 600px;
+                margin: 20px auto;
+            }
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+            .menu-icon {
+                font-size: 24px;
+            }
+            .content img {
+                width: 120px;
+                height: 120px;
+            }
+            .content p {
+                font-size: 16px;
+            }
+            .banner-text {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <video class="logo" loop autoplay muted>
+                <source src="M TECH.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="javascript:void(0);" onclick="toggleMenu()" style="display: flex; justify-content: center; font-size: 24px;"><i class="fas fa-times"></i></a>
+            </div>
+        </div>
+        <div class="banner">
+            <video class="logo" loop autoplay muted>
+                <source src="2025_01_21_00_30_IMG_2785.MOV" type="video/mp4">
+            </video>
+            <div class="banner-text">
+            </div>
+        </div>
+        <div class="content">
+            <div class="left-align">
+                <img alt="Placeholder image 1" src="man.JPG" style="width: 150px; height: 150px;">
+                <div style="text-align: center;">
+                    <p class="move-right" style="font-size: large; font-weight: 600; margin-top: -20px;">ALIYYSODIPE</p>
+                </div>
+            </div>
+            <div class="right-align">
+                <img alt="Placeholder image 2" src="H.JPG" style="width: 150px; height: 150px;">
+                <p style="text-align: left; font-size: large; font-weight: 600;">ALIYYSODIPE</p>
+            </div>
+            <div class="left-align">
+                <img alt="Placeholder image 3" src="phone.JPG" style="width: 150px; height: 150px;">
+                <p class="move-right" style="font-size: large; font-weight: 600;">ALIYYSODIPE</p>
+            </div>
+        </div>
+    </div>
+      <div class="extra-section">
+            <div style="text-align: center;">
+                <h2>Our Services</h2>
+                <p>We specialize in phone repair, tablet maintenance, and device upgrades.</p>
+            </div>
+            <div style="text-align: center;"></div>
+                <div style="display: flex; justify-content: center;"></div>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="phone.JPG" alt="Service 1" style="width: 100px; height: 100px; margin: 10px; border-radius: 10px;">
+                        <img src="phone.JPG" alt="Service 2" style="width: 100px; height: 100px; margin: 10px; border-radius: 10px;">
+                        <img src="phone.JPG" alt="Service 3" style="width: 100px; height: 100px; margin: 10px; border-radius: 10px;">
+                    </div>
+                </div>
+            </div>
+        <div class="team-member">
+            <img
+              src="omo.JPG"
+              alt="Team Member 1"
+              style="display: block; margin: 0 auto; width: 200px; height: 200px; border-radius: 50%;"
+            />
+            <div style="text-align: center;">
+                <h2>MAJEED.A.O</h2>
+                <p>CEO/MTECHNOLOGIES</p>
+            </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 MTECH Phone Repairs.All Rights Reserved
+             <h6> <a href="#">Privacy Policy</a> /<a href="#">Terms of Service</a></h6></p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('navMenu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
